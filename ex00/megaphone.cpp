@@ -6,7 +6,7 @@
 /*   By: huidris <huidris@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 06:28:46 by huidris           #+#    #+#             */
-/*   Updated: 2025/05/24 09:40:30 by huidris          ###   ########.fr       */
+/*   Updated: 2025/06/14 12:56:55 by huidris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	main(int ac, char **argv)
 				std::cout << (char)toupper(argv[i][j]);
 		}
 	}
-	std :: cout << '\n';
+	std::cout << '\n';
 	return 0;
 }

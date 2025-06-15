@@ -1,9 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: huidris <huidris@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/15 17:05:32 by huidris           #+#    #+#             */
+/*   Updated: 2025/06/15 17:58:59 by huidris          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <iostream>
 #include "Phonebook.hpp"
-#include "Contact.hpp"
-#include <string>
-#include <iomanip>
 
 PhoneBook::PhoneBook()
 {
@@ -47,6 +54,8 @@ void PhoneBook::searchContact()
 		std::cout << "Enter the index of the contact you want to search: ";
 		std::string indexChoice;
 		std::getline(std::cin, indexChoice);
+		if (std::cin.eof())
+			return;
 		indexInt = indexChoice[0] - '0' - 1;
 		if (indexChoice.length() == 1 && indexInt >= 0 && indexInt < 8 && indexInt < _contactNumber)
 			break;

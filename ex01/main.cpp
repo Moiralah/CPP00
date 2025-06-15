@@ -6,14 +6,11 @@
 /*   By: huidris <huidris@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 05:12:36 by huidris           #+#    #+#             */
-/*   Updated: 2025/06/15 05:15:09 by huidris          ###   ########.fr       */
+/*   Updated: 2025/06/15 17:55:30 by huidris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
-#include <iostream>
-#include <string>
-#include <iomanip>
 
 int main()
 {
@@ -27,7 +24,6 @@ int main()
 	std::cout << "Use 'HELP' for instruction" << std::endl;
 	while(1)
 	{
-
 		std::cout << "Enter command :- ";
 		std::getline(std::cin, input);
 		if (input == "EXIT" || std::cin.eof())

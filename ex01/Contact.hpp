@@ -20,6 +20,7 @@ class Contact
 		// ADD
 		void setContact();
 		std::string validateInput(std::string &input);
+		std::string trimInput(std::string &input);
 
 		// SEARCH
 		void displayContact() const;

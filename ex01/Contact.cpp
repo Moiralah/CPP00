@@ -1,8 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: huidris <huidris@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/15 17:05:48 by huidris           #+#    #+#             */
+/*   Updated: 2025/06/15 19:11:19 by huidris          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
-#include "Phonebook.hpp"
-#include <iostream>
-#include <string>
-#include <iomanip>
 
 Contact::Contact() {};
 Contact::~Contact() {};
@@ -28,20 +36,24 @@ std::string Contact::validateInput(std::string &input)
 {
 	std::cout << ": ";
 	std::getline(std::cin, input);
+	if (std::cin.eof())
+		return (" ");
+	input = trimInput(input);
 	if (input.empty())
 	{
 		std::cout << "Input cannot be empty. Please try again." << std::endl;
 		return validateInput(input);
 	}
-	// for (size_t i = 0; i < input.length(); i++)
-	// {
-	// 	if (input[i] == ' '|| input[i] == '\t')
-	// 	{
-	// 		std::cout << "Input cannot contain spaces. Please try again." << std::endl;
-	// 		return validateInput(input);
-	// 	}
-	// }
 	return input;
+}
+
+std::string Contact::trimInput(std::string &input)
+{
+	size_t start = input.find_first_not_of(" \t");
+	size_t end = input.find_last_not_of(" \t");
+	if (start == std::string::npos || end == std::string::npos)
+		return "";
+	return (input.substr(start, end - start + 1));
 }
 
 void Contact::displayContact() const

@@ -61,11 +61,11 @@ std::string Contact::getContact(const std::string &contact) const
 
 void Contact::searchContact() const
 {
-	std::cout << "First Name: " << this->_firstName << std::endl;
-	std::cout << "Last Name: " << this->_lastName << std::endl;
-	std::cout << "Nickname: " << this->_nickName << std::endl;
-	std::cout << "Phone Number: " << this->_phoneNumber << std::endl;
-	std::cout << "Darkest Secret: " << this->_darkestSecret << std::endl;
+	std::cout << "First Name	: " << this->_firstName << std::endl;
+	std::cout << "Last Name	: " << this->_lastName << std::endl;
+	std::cout << "Nickname	: " << this->_nickName << std::endl;
+	std::cout << "Phone Number	: " << this->_phoneNumber << std::endl;
+	std::cout << "Darkest Secret	: " << this->_darkestSecret << std::endl;
 }
 
 void Contact::setTest()
